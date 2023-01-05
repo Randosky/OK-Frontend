@@ -1,5 +1,5 @@
 let tabsBtn = document.querySelectorAll('.steps__href');
-let tabsItem = document.querySelectorAll('.how__list');
+let tabsItem = document.querySelectorAll('.about__list');
 
 tabsBtn.forEach(function(element){
   element.addEventListener('click', function(e){
@@ -9,7 +9,7 @@ tabsBtn.forEach(function(element){
       btn.classList.remove('steps__href--active')});
     e.currentTarget.classList.add('steps__href--active');
 
-    tabsItem.forEach(function(element){ element.classList.remove('how__list--active')});
-    document.querySelector(`[data-target="${path}"]`).classList.add('how__list--active');
+    tabsItem.forEach(function(element){ element.classList.remove('about__list--active')});
+    document.querySelector(`[data-target="${path}"]`).classList.add('about__list--active');
   });
 });

@@ -17,9 +17,20 @@ a {
   cursor: pointer;
 }
 
-p {
+p,
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
   padding: 0;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 img {
@@ -114,4 +125,3 @@ body {
 }
 
 /* about */
-
