@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>OK-Frontend</title>
+  <link rel="stylesheet" href="../static/css/information.css">
+  <link rel="stylesheet" href="../static/css/normalize.css">
+  <!-- <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet"> -->
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__container">
+      {% load static %}
+      <a href="./information.html" class="header__left">
+        <img src="../static/img/logo.svg" alt="Логотип" class="header__logo">
+        <p class="header__text">OK-Frontend</p>
+      </a>
+      <ul class="header__list list-reset navigation">
+        <li class="navigation__item"><a href="./demand.html">востребованность</a></li>
+        <li class="navigation__item"><a href="./geography.html">география</a></li>
+        <li class="navigation__item"><a href="./skills.html">навыки</a></li>
+        <li class="navigation__item"><a href="./vacancies.html">последние вакансии</a></li>
+      </ul>
+    </div>
+  </header>
+  <footer class="footer">
+    <p class="footer__text">Работу выполнил: Овинкин Кирилл Михайлович</p>
+    <p class="footer__text">Группа: РИ-210911</p>
+  </footer>
+  <script src="../static/js/information.js"></script>
+</body>
+
+</html>
