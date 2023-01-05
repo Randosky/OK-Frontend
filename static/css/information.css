@@ -54,7 +54,7 @@ img {
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  background-color: #E5E5E5;
+  background-color: white;
 }
 
 .container {
@@ -87,7 +87,7 @@ body {
 
 .navigation__item {
   font-size: 30px;
-  color: #666;
+  color: #333;
 }
 
 .navigation__item:not(:last-child) {
@@ -99,6 +99,7 @@ body {
   background-image: url("../img/hero_bg.png");
   background-size: cover;
   background-repeat: no-repeat;
+  margin-bottom: 45px;
 }
 
 .hero__container {
@@ -125,3 +126,39 @@ body {
 }
 
 /* about */
+
+.about__title{
+  margin-bottom: 45px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+}
+
+.steps{
+  margin-bottom: 30px;
+}
+
+.steps__href{
+  font-weight: 400;
+  font-size: 24px;
+  color: #333;
+}
+
+.steps__item:not(:last-child){
+  margin-right: 17px;
+}
+
+.left__title{
+  font-weight: 400;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about__list{
+  display: none;
+}
+
+.about__list--active{
+  display: flex;
+}
