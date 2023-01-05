@@ -83,6 +83,7 @@ body {
 .header__logo {
   height: 90px;
   width: 186px;
+  margin-bottom: 5px;
 }
 
 .navigation__item {
@@ -94,12 +95,25 @@ body {
   margin-right: 17px;
 }
 
+.header__left{
+  display: flex;
+  flex-direction: column;
+}
+
+.header__text{
+  font-size: 22px;
+  font-weight: 700;
+  color: #02b0ff;
+  text-align: center;
+  padding-right: 8px;
+}
+
 /* hero */
 .hero {
   background-image: url("../img/hero_bg.png");
   background-size: cover;
   background-repeat: no-repeat;
-  margin-bottom: 45px;
+  margin-bottom: 60px;
 }
 
 .hero__container {
@@ -117,15 +131,21 @@ body {
   font-weight: 800;
   color: #EFEFEF;
   margin-bottom: 45px;
+  text-align: center;
 }
 
 .hero__descr {
   font-size: 36px;
   font-weight: 800;
   color: #EFEFEF;
+  text-align: center;
 }
 
 /* about */
+
+.about{
+  margin-bottom: 60px;
+}
 
 .about__title {
   margin-bottom: 45px;
@@ -216,5 +236,21 @@ body {
 /* footer */
 
 .footer {
-  height: 380px;
+  height: 200px;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__text{
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.footer__text:not(:last-child){
+  margin-bottom: 15px;
 }

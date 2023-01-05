@@ -16,7 +16,10 @@
   <header class="header">
     <div class="container header__container">
       {% load static %}
-      <a href="#"><img src="../static/img/logo.svg" alt="Логотип" class="header__logo"></a>
+      <a href="#" class="header__left">
+        <img src="../static/img/logo.svg" alt="Логотип" class="header__logo">
+        <p class="header__text">OK-Frontend</p>
+      </a>
       <ul class="header__list list-reset navigation">
         <li class="navigation__item"><a href="./demand.html">востребованность</a></li>
         <li class="navigation__item"><a href="./geography.html">география</a></li>
@@ -147,7 +150,8 @@
     </div>
   </section>
   <footer class="footer">
-
+    <p class="footer__text">Работу выполнил: Овинкин Кирилл Михайлович</p>
+    <p class="footer__text">Группа: РИ-210911</p>
   </footer>
   <script src="../static/js/information.js"></script>
 </body>
