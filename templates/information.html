@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>OK-Frontend</title>
+  <link rel="stylesheet" href="../static/css/information.css">
+  <link rel="stylesheet" href="../static/css/normalize.css">
+  <!-- <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet"> -->
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__container">
+      {% load static %}
+      <a href="#"><img src="../static/img/logo.svg" alt="Логотип" class="header__logo"></a>
+      <ul class="header__list list-reset navigation">
+        <li class="navigation__item"><a href="./demand.html">востребованность</a></li>
+        <li class="navigation__item"><a href="./geography.html">география</a></li>
+        <li class="navigation__item"><a href="./skills.html">навыки</a></li>
+        <li class="navigation__item"><a href="./vacancies.html">последние вакансии</a></li>
+      </ul>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="container hero__container">
+      <h1 class="hero__title">Frontend-разработчик</h1>
+      <p class="hero__descr">Специалист по разработке пользовательских интерфейсов</p>
+    </div>
+  </section>
+  <section class="main__title how" id="how">
+    <div class="container">
+      <h2 class="title how__title">Как мы работаем</h2>
+      <div class="how__steps steps">
+        <ul class="steps__list list-reset flex">
+          <li class="steps__item"><button class="btn-reset steps__href steps__href--active" data-path="one">1
+              шаг</button></li>
+          <li class="steps__item"><button class="btn-reset steps__href" data-path="two">2 шаг</button></li>
+          <li class="steps__item"><button class="btn-reset steps__href" data-path="three">3 шаг</button></li>
+          <li class="steps__item"><button class="btn-reset steps__href" data-path="four">4 шаг</button></li>
+        </ul>
+      </div>
+      <ul class="how__list list-reset flex how__list--active" data-target="one">
+        <li class="how__item left">
+          <h3 class="left__title">Проводим консультацию</h3>
+          <p class="left__descr">Влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации приоритизации разума над
+            эмоциями. В&nbsp;рамках спецификации современных стандартов, некоторые особенности внутренней политики будут
+            объективно рассмотрены соответствующими инстанциями. А также представители современных социальных
+            резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь
+            всего лишь частью общей картины, реплицированные с&nbsp;зарубежных источников, современные исследования
+            подвергнуты целой серии независимых исследований. Кстати, стремящиеся вытеснить традиционное производство,
+            нанотехнологии освещают чрезвычайно интересные особенности картины в&nbsp;целом, однако конкретные выводы,
+            разумеется, призваны к&nbsp;ответу.</p>
+        </li>
+        <li class="how__item right right-one"></li>
+      </ul>
+      <ul class="how__list list-reset flex" data-target="two">
+        <li class="how__item left">
+          <h3 class="left__title">Составляем смету</h3>
+          <p class="left__descr">Внедрения и&nbsp;модернизации приоритизации разума над эмоциями. В&nbsp;рамках
+            спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены
+            соответствующими инстанциями. А&nbsp;также представители современных социальных резервов, инициированные
+            исключительно синтетически, ограничены исключительно образом мышления. Являясь всего
+            лишь частью общей
+            картины, реплицированные с&nbsp;зарубежных источников, современные исследования подвергнуты целой серии
+            независимых исследований.</p>
+        </li>
+        <li class="how__item right right-two"></li>
+      </ul>
+      <ul class="how__list list-reset flex" data-target="three">
+        <li class="how__item left">
+          <h3 class="left__title">Привлекаем подрядчиков</h3>
+          <p class="left__descr">Идейные соображения высшего порядка, а&nbsp;также новая модель организационной
+            деятельности требует анализа прогресса профессионального сообщества. Высокий уровень вовлечения
+            представителей целевой аудитории является четким доказательством простого факта: высококачественный прототип
+            будущего проекта напрямую зависит от&nbsp;дальнейших направлений развития. Разнообразный и&nbsp;богатый опыт
+            говорит нам, что новая модель организационной деятельности говорит о&nbsp;возможностях системы массового
+            участия. Принимая во&nbsp;внимание показатели успешности, постоянное информационно-пропагандистское
+            обеспечение нашей деятельности позволяет выполнить важные задания по&nbsp;разработке прогресса
+            профессионального сообщества.</p>
+        </li>
+        <li class="how__item right right-three"></li>
+      </ul>
+      <ul class="how__list list-reset flex" data-target="four">
+        <li class="how__item left">
+          <h3 class="left__title">Инспектируем все этапы работ</h3>
+          <p class="left__descr">Высокий уровень вовлечения представителей целевой аудитории является четким
+            доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит
+            от&nbsp;дальнейших направлений развития. Разнообразный и&nbsp;богатый опыт говорит нам, что новая модель
+            организационной деятельности говорит о&nbsp;возможностях системы массового участия. Принимая
+            во&nbsp;внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей
+            деятельности позволяет.</p>
+        </li>
+        <li class="how__item right right-four"></li>
+      </ul>
+    </div>
+  </section>
+  <script href="../static/js/information.js"></script>
+</body>
+
+</html>
