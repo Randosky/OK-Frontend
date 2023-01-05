@@ -127,38 +127,94 @@ body {
 
 /* about */
 
-.about__title{
+.about__title {
   margin-bottom: 45px;
   font-size: 36px;
   font-weight: 700;
   color: #333;
 }
 
-.steps{
+.steps {
   margin-bottom: 30px;
 }
 
-.steps__href{
+.steps__href {
   font-weight: 400;
   font-size: 24px;
   color: #333;
 }
 
-.steps__item:not(:last-child){
+.steps__item:not(:last-child) {
   margin-right: 17px;
 }
 
-.left__title{
-  font-weight: 400;
+.left__title {
+  font-weight: 600;
   font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.about__list {
+  display: none;
+}
+
+.about__list--active {
+  display: flex;
+}
+
+.left__descr {
+  font-weight: 400;
+  font-size: 18px;
+  color: #333;
+  line-height: 28px;
+}
+
+.left_paragraph:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.left__theme {
+  font-weight: 400;
+  font-size: 22px;
   color: #333;
   margin-bottom: 15px;
 }
 
-.about__list{
-  display: none;
+.left {
+  width: calc(100% / 2);
+  margin-right: 100px;
 }
 
-.about__list--active{
-  display: flex;
+.right {
+  width: calc(100% / 2 - 100px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.right-one {
+  background-image: url(../img/about_1.jpg);
+}
+
+.right-two {
+  background-image: url(../img/about_2.jpg);
+}
+
+.right-three {
+  background-image: url(../img/about_3.jpg);
+}
+
+.right-four {
+  background-image: url(../img/about_4.jpg);
+}
+
+.right-five {
+  background-image: url(../img/about_5.jpg);
+}
+
+/* footer */
+
+.footer {
+  height: 380px;
 }
