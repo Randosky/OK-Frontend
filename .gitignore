@@ -3,3 +3,6 @@
 /idea
 .idea
 vacancies_with_skills.csv
+new_vac_with_dif_currencies.db
+*vacancies_with_skills.csv
+*new_vac_with_dif_currencies.db
