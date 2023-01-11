@@ -18,7 +18,7 @@ class Profession(models.Model):
 
 
 class StatByYear(models.Model):
-    year = models.IntegerField("Год")
+    years = models.IntegerField("Год")
     salary = models.FloatField("Средняя зарплата")
     salary_vac = models.FloatField("Средняя зарплата - Frontend-программист")
     count = models.FloatField("Количество вакансий")
@@ -26,15 +26,15 @@ class StatByYear(models.Model):
 
     class Meta:
         verbose_name = "Статистика по годам"
-        verbose_name_plural = "Статистика по годам"
+        verbose_name_plural = "Статистик по годам"
 
 
 class StatByArea(models.Model):
-    city_1 = models.CharField("Город", max_length=40)
+    area_name_sal = models.CharField("Город", max_length=40)
     salary = models.FloatField("Уровень зарплат")
-    city_2 = models.CharField("Город", max_length=40)
-    vacancies = models.FloatField("Доля вакансий")
+    area_name_vac = models.CharField("Город", max_length=40)
+    count = models.FloatField("Доля вакансий")
 
     class Meta:
         verbose_name = "Статистика по городам"
-        verbose_name_plural = "Статистика по городам"
+        verbose_name_plural = "Статистик по городам"

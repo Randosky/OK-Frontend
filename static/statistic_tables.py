@@ -83,6 +83,12 @@ dicts_list_by_year = salaries_by_year.merge(inp_vacancy_salary,
 
 dicts_list_by_area = salaries_areas.join(vacancies_areas, how="outer")
 
+dicts_list_by_year["id"] = [i for i in range(len(dicts_list_by_year))]
+dicts_list_by_year = dicts_list_by_year[['id'] + [x for x in dicts_list_by_year.columns if x != 'id']]
+
+dicts_list_by_area["id"] = [i for i in range(len(dicts_list_by_area))]
+dicts_list_by_area = dicts_list_by_area[['id'] + [x for x in dicts_list_by_area.columns if x != 'id']]
+
 connection = sqlite3.connect("../db.sqlite3")
 cursor = connection.cursor()
 dicts_list_by_year.to_sql(name="frontend_project_statbyyear", con=connection, if_exists='replace', index=False)
