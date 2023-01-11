@@ -254,3 +254,24 @@ body {
 .footer__text:not(:last-child){
   margin-bottom: 15px;
 }
+
+/* Others */
+
+.info__header{
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 45px;
+}
+
+.info_text{
+  font-weight: 400;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* .info__graphics{
+
+} */

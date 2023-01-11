@@ -16,15 +16,15 @@
   <header class="header">
     <div class="container header__container">
       {% load static %}
-      <a href="./information.html" class="header__left">
+      <a href="{% url 'information' %}" class="header__left">
         <img src="../static/img/logo.svg" alt="Логотип" class="header__logo">
         <p class="header__text">OK-Frontend</p>
       </a>
       <ul class="header__list list-reset navigation">
-        <li class="navigation__item"><a href="./demand.html">востребованность</a></li>
-        <li class="navigation__item"><a href="./geography.html">география</a></li>
-        <li class="navigation__item"><a href="./skills.html">навыки</a></li>
-        <li class="navigation__item"><a href="./vacancies.html">последние вакансии</a></li>
+        <li class="navigation__item"><a href="{% url 'demand' %}">востребованность</a></li>
+        <li class="navigation__item"><a href="{% url 'geography' %}">география</a></li>
+        <li class="navigation__item"><a href="{% url 'skills' %}">навыки</a></li>
+        <li class="navigation__item"><a href="{% url 'vacancies' %}">последние вакансии</a></li>
       </ul>
     </div>
   </header>

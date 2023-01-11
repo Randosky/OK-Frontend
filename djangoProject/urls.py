@@ -22,9 +22,9 @@ from frontend_project.views import show_page, show_demand_page, show_geography_p
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', show_page),
-    path('demand.html', show_demand_page),
-    path('geography.html', show_geography_page),
-    path('skills.html', show_skills_page),
-    path('vacancies.html', show_vacancies_page),
-    path("information.html", show_page)
+    path('demand.html', show_demand_page, name="demand"),
+    path('geography.html', show_geography_page, name="geography"),
+    path('skills.html', show_skills_page, name="skills"),
+    path('vacancies.html', show_vacancies_page, name="vacancies"),
+    path("information.html", show_page, name="information")
 ]

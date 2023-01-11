@@ -89,6 +89,7 @@ print("Уровень зарплат по городам (в порядке уб
 print("Доля вакансий по городам (в порядке убывания):", vacancies_areas)
 print("Доля прочих вакансий", others)
 
+
 class ReportDemand:
     def __init__(self, vac_name, dicts_by_year):
         self.generate_image(vac_name, dicts_by_year)
