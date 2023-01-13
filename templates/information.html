@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>OK-Frontend</title>
   <link rel="stylesheet" href="../static/css/information.css">
@@ -13,147 +13,186 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="container header__container">
-      {% load static %}
-      <a href="{% url 'information' %}" class="header__left">
-        <img src="../static/img/logo.svg" alt="Логотип" class="header__logo">
-        <p class="header__text">OK-Frontend</p>
-      </a>
-      <ul class="header__list list-reset navigation">
-        <li class="navigation__item"><a href="{% url 'demand' %}">востребованность</a></li>
-        <li class="navigation__item"><a href="{% url 'geography' %}">география</a></li>
-        <li class="navigation__item"><a href="{% url 'skills' %}">навыки</a></li>
-        <li class="navigation__item"><a href="{% url 'vacancies' %}">последние вакансии</a></li>
+<header class="header">
+  <div class="container header__container">
+    {% load static %}
+    <a href="{% url 'information' %}" class="header__left">
+      <img src="../static/img/logo.svg" alt="Логотип" class="header__logo">
+      <p class="header__text">OK-Frontend</p>
+    </a>
+    <ul class="header__list list-reset navigation">
+      <li class="navigation__item"><a href="{% url 'demand' %}">востребованность</a></li>
+      <li class="navigation__item"><a href="{% url 'geography' %}">география</a></li>
+      <li class="navigation__item"><a href="{% url 'skills' %}">навыки</a></li>
+      <li class="navigation__item"><a href="{% url 'vacancies' %}">последние вакансии</a></li>
+    </ul>
+  </div>
+</header>
+<section class="hero">
+  <div class="container hero__container">
+    <h1 class="hero__title">Frontend-разработчик</h1>
+    <p class="hero__descr">Специалист по разработке пользовательских интерфейсов</p>
+  </div>
+</section>
+<section class="about">
+  <div class="container about__container">
+    <h2 class="about__title">Шаги изучения профессии frontend-разработчика</h2>
+    <div class="about__steps steps">
+      <ul class="steps__list list-reset flex">
+        <li class="steps__item">
+          <button class="btn-reset steps__href steps__href--active" data-path="one">1
+            шаг
+          </button>
+        </li>
+        <li class="steps__item">
+          <button class="btn-reset steps__href" data-path="two">2 шаг</button>
+        </li>
+        <li class="steps__item">
+          <button class="btn-reset steps__href" data-path="three">3 шаг</button>
+        </li>
+        <li class="steps__item">
+          <button class="btn-reset steps__href" data-path="four">4 шаг</button>
+        </li>
+        <li class="steps__item">
+          <button class="btn-reset steps__href" data-path="five">5 шаг</button>
+        </li>
       </ul>
     </div>
-  </header>
-  <section class="hero">
-    <div class="container hero__container">
-      <h1 class="hero__title">Frontend-разработчик</h1>
-      <p class="hero__descr">Специалист по разработке пользовательских интерфейсов</p>
+    <ul class="about__list list-reset flex about__list--active" data-target="one">
+      <li class="about__item left">
+        <h3 class="left__title">Чем занимается?</h3>
+        <div class="left__descr">Фронт-энд разработчик&nbsp;&mdash; это верстальщик и&nbsp;программист в&nbsp;одном
+          лице, герой стиля и&nbsp;кода, создающий пользовательский интерфейс. Главная задача фронт-энд
+          разработчика&nbsp;&mdash; перевести дизайн-макет в&nbsp;легко читаемый и&nbsp;расширяемый код, сделать так,
+          чтобы всё на&nbsp;сайте или в&nbsp;веб-приложении работало быстро и&nbsp;удобно для пользователя. Слово
+          &laquo;фронт&raquo; в&nbsp;названии профессии говорит о&nbsp;том, что фронт-энд разработчик находится
+          на&nbsp;передовой линии с&nbsp;конечным пользователем и&nbsp;отвечает за&nbsp;внешний функционал приложения,
+          с&nbsp;которым контактирует пользователь. А&nbsp;за&nbsp;серверную часть отвечает программист другой
+          профессии, его называют Backend-разработчик
+        </div>
+      </li>
+      <li class="about__item right right-one"></li>
+    </ul>
+    <ul class="about__list list-reset flex" data-target="two">
+      <li class="about__item left">
+        <h3 class="left__title">Обязанности</h3>
+        <div class="left__descr">
+          <p class="left_paragraph">Создание HTML-страницы сайта на&nbsp;основе дизайн-макетов, то&nbsp;есть верстка с
+            использованием HTML и&nbsp;CSS на&nbsp;основе дизайна/дизайн-макетов;</p>
+          <p class="left_paragraph">
+            Привязка к&nbsp;пользовательскому интерфейсу скриптов, которые обеспечивают визуализацию и&nbsp;анимацию
+            страниц сайта;</p>
+          <p class="left_paragraph">
+            Обеспечение необходимого уровня пользовательского интерфейса (UI&nbsp;&mdash; User Interface) и&nbsp;опыта
+            взаимодействия (UX&nbsp;&mdash; User Experience);</p>
+          <p class="left_paragraph">
+            Разработка одностраничных приложений (single page application) на&nbsp;популярных библиотеках: React,
+            Angular или Vue.js.</p>
+        </div>
+      </li>
+      <li class="about__item right right-two"></li>
+    </ul>
+    <ul class="about__list list-reset flex" data-target="three">
+      <li class="about__item left">
+        <h3 class="left__title">Плюсы и минусы профессии</h3>
+        <div class="left__descr">
+          <h4 class="left__theme">Плюсы:</h4>
+          <p class="left_paragraph">Высокая востребованность. Спрос на&nbsp;специалистов данного направления был, есть
+            и&nbsp;будет еще в&nbsp;обозримом будущем.</p>
+          <p class="left_paragraph">Бесперервывное обучение. Всегда существуют дороги для саморазвития в&nbsp;данной
+            професии</p>
+          <p class="left_paragraph">Можно сказать, что это полноценный разработчик сайта, ведь часть функциональности
+            можно реализовать без backend-разработчика, есть специальные сайты, которые позволяют сохранять информацию
+            на&nbsp;сервере без программирования.</p>
+          <h4 class="left__theme">Минусы:</h4>
+          <p class="left_paragraph">В&nbsp;этой профессии нечетко определены должностные обязанности,
+            и&nbsp;не&nbsp;каждый руководитель понимает, что именно должен делать фронт-энд разработчик.</p>
+          <p class="left_paragraph">Взаимодействие с&nbsp;большим количеством людей: бэк-энд разработчиками,
+            пользователями, дизайнерами, тестировщиками, аналитиками&nbsp;&mdash; и&nbsp;постоянное участие
+            в&nbsp;командных обсуждениях может быть напряженным и&nbsp;неэффективным.</p>
+        </div>
+      </li>
+      <li class="about__item right right-three"></li>
+    </ul>
+    <ul class="about__list list-reset flex" data-target="four">
+      <li class="about__item left">
+        <h3 class="left__title">Важные качества</h3>
+        <div class="left__descr">
+          <h4 class="left__theme">Hard skills:</h4>
+          <p class="left_paragraph">Знать HTML и&nbsp;CSS&nbsp;&mdash; это основа. HTML позволяет создавать структуру
+            страницы, а&nbsp;CSS&nbsp;&mdash; задавать стили: то, как будут выглядеть заголовки, подписи, таблицы,
+            графики.</p>
+          <p class="left_paragraph">Знать JavaScript. Это язык, который позволяет делать страницы интерактивными
+            и&nbsp;связывать их&nbsp;между собой.</p>
+          <p class="left_paragraph">Уметь пользоваться системой управления версиями Git и&nbsp;сервисом GitHub, чтобы
+            хранить все версии кода в&nbsp;одном месте и&nbsp;работать над ним совместно с&nbsp;командой.</p>
+          <p class="left_paragraph">Освоить фреймворки для работы с&nbsp;JavaScript: Vue.js, React.js.</p>
+          <p class="left_paragraph">Понимать основы юзабилити сайтов и&nbsp;сервисов, принципы кроссплатформенной
+            верстки, чтобы создавать удобные для пользователя интерфейсы.</p>
+          <p class="left_paragraph">Базово пользоваться Figma или Photoshop, на&nbsp;случай, если нужно будет быстро
+            что-то перерисовать без помощи дизайнера.</p>
+          <h4 class="left__theme">Soft skills:</h4>
+          <p class="left_paragraph">Уметь работать в&nbsp;команде. Не&nbsp;тянуть на&nbsp;себя одеяло,
+            но&nbsp;проявлять
+            экспертизу и&nbsp;отстаивать свои границы, находить компромисс.</p>
+          <p class="left_paragraph">Английский язык для чтения технической документации, обучения и&nbsp;работы
+            на&nbsp;международном рынке.</p>
+          <p class="left_paragraph">Упорство. Понадобится, чтобы пережить первые 100 отказов при приеме на&nbsp;работу
+            и&nbsp;найти команду мечты</p>
+        </div>
+      </li>
+      <li class="about__item right right-four"></li>
+    </ul>
+    <ul class="about__list list-reset flex" data-target="five">
+      <li class="about__item left">
+        <h3 class="left__title">Карьера</h3>
+        <div class="left__descr">
+          <p class="left_paragraph">Фронт-энд разработчик может стать непревзойденным и&nbsp;высокооплачиваемым гуру
+            создания пользовательской
+            части продукта или попробовать себя в&nbsp;смежных ролях.</p>
+          <p class="left_paragraph">Дальнейшая карьера может складываться по-разному, в зависимости от места работы,
+            личных предпочтений. В
+            любом случае в IT-сфере полезно развиваться в горизонтальном направлении, осваивая смежные профессии,
+            чтобы
+            стать настоящим мастером-асом.</p>
+        </div>
+      </li>
+      <li class="about__item right right-five"></li>
+    </ul>
+  </div>
+</section>
+<section class="demand">
+  <div class="container demand__container">
+    <h2 class="demand__head">Также немного про востребованность данной профессии</h2>
+    <div class="demand__block">
+      <p class="demand__text">По&nbsp;данным HR-портала HeadHunter, уровень конкуренции во&nbsp;frontend-разработке
+        ниже,
+        чем в&nbsp;других
+        отраслях. По&nbsp;статистике, на&nbsp;1&nbsp;вакантное место претендуют 4-5&nbsp;кандидатов. Для сравнения в&nbsp;других
+        профессиях этот показатель выше: от&nbsp;7&nbsp;до&nbsp;10&nbsp;резюме на&nbsp;одно предложение.</p>
+      <p class="demand__text">Frontend-программисты могут работать в&nbsp;разных условиях: в&nbsp;штате, на&nbsp;фрилансе,
+        в&nbsp;офисе,
+        удаленно, на&nbsp;себя и&nbsp;т.&nbsp;д. Бизнес активно переходит в&nbsp;онлайн, все больше компаний нуждаются в&nbsp;качественных
+        и&nbsp;удобных сайтах, поэтому спрос на&nbsp;фронтендеров в&nbsp;последние годы остается стабильно высоким.</p>
+      <p class="demand__text">Мы&nbsp;изучили информацию на&nbsp;ХедХантере&nbsp;&mdash; на&nbsp;текущий момент
+        опубликовано более 3500
+        актуальных вакансий для frontend-разработчиков. Из&nbsp;них более 200&nbsp;&mdash; это должности без требований
+        к&nbsp;опыту.
+        Многие компании готовы трудоустраивать и&nbsp;обучать новичков.</p>
+      <p class="demand__text">Еще почти 1500 объявлений&nbsp;&mdash; вакансии с&nbsp;возможностью работать удаленно или
+        в&nbsp;гибком
+        графике.
+        То&nbsp;есть
+        при желании можно найти высокооплачиваемую работу в&nbsp;другом городе, например, в&nbsp;Москве или
+        Санкт-Петербурге.</p>
     </div>
-  </section>
-  <section class="about">
-    <div class="container about__container">
-      <h2 class="about__title">Шаги изучения профессии frontend-разработчика</h2>
-      <div class="about__steps steps">
-        <ul class="steps__list list-reset flex">
-          <li class="steps__item"><button class="btn-reset steps__href steps__href--active" data-path="one">1
-              шаг</button></li>
-          <li class="steps__item"><button class="btn-reset steps__href" data-path="two">2 шаг</button></li>
-          <li class="steps__item"><button class="btn-reset steps__href" data-path="three">3 шаг</button></li>
-          <li class="steps__item"><button class="btn-reset steps__href" data-path="four">4 шаг</button></li>
-          <li class="steps__item"><button class="btn-reset steps__href" data-path="five">5 шаг</button></li>
-        </ul>
-      </div>
-      <ul class="about__list list-reset flex about__list--active" data-target="one">
-        <li class="about__item left">
-          <h3 class="left__title">Чем занимается?</h3>
-          <div class="left__descr">Фронт-энд разработчик&nbsp;&mdash; это верстальщик и&nbsp;программист в&nbsp;одном
-            лице, герой стиля и&nbsp;кода, создающий пользовательский интерфейс. Главная задача фронт-энд
-            разработчика&nbsp;&mdash; перевести дизайн-макет в&nbsp;легко читаемый и&nbsp;расширяемый код, сделать так,
-            чтобы всё на&nbsp;сайте или в&nbsp;веб-приложении работало быстро и&nbsp;удобно для пользователя. Слово
-            &laquo;фронт&raquo; в&nbsp;названии профессии говорит о&nbsp;том, что фронт-энд разработчик находится
-            на&nbsp;передовой линии с&nbsp;конечным пользователем и&nbsp;отвечает за&nbsp;внешний функционал приложения,
-            с&nbsp;которым контактирует пользователь. А&nbsp;за&nbsp;серверную часть отвечает программист другой
-            профессии, его называют Backend-разработчик</div>
-        </li>
-        <li class="about__item right right-one"></li>
-      </ul>
-      <ul class="about__list list-reset flex" data-target="two">
-        <li class="about__item left">
-          <h3 class="left__title">Обязанности</h3>
-          <div class="left__descr">
-            <p class="left_paragraph">Создание HTML-страницы сайта на&nbsp;основе дизайн-макетов, то&nbsp;есть верстка с
-              использованием HTML и&nbsp;CSS на&nbsp;основе дизайна/дизайн-макетов;</p>
-            <p class="left_paragraph">
-              Привязка к&nbsp;пользовательскому интерфейсу скриптов, которые обеспечивают визуализацию и&nbsp;анимацию
-              страниц сайта;</p>
-            <p class="left_paragraph">
-              Обеспечение необходимого уровня пользовательского интерфейса (UI&nbsp;&mdash; User Interface) и&nbsp;опыта
-              взаимодействия (UX&nbsp;&mdash; User Experience);</p>
-            <p class="left_paragraph">
-              Разработка одностраничных приложений (single page application) на&nbsp;популярных библиотеках: React,
-              Angular или Vue.js.</p>
-          </div>
-        </li>
-        <li class="about__item right right-two"></li>
-      </ul>
-      <ul class="about__list list-reset flex" data-target="three">
-        <li class="about__item left">
-          <h3 class="left__title">Плюсы и минусы профессии</h3>
-          <div class="left__descr">
-            <h4 class="left__theme">Плюсы:</h4>
-            <p class="left_paragraph">Высокая востребованность. Спрос на&nbsp;специалистов данного направления был, есть
-              и&nbsp;будет еще в&nbsp;обозримом будущем.</p>
-            <p class="left_paragraph">Бесперервывное обучение. Всегда существуют дороги для саморазвития в&nbsp;данной
-              професии</p>
-            <p class="left_paragraph">Можно сказать, что это полноценный разработчик сайта, ведь часть функциональности
-              можно реализовать без backend-разработчика, есть специальные сайты, которые позволяют сохранять информацию
-              на&nbsp;сервере без программирования.</p>
-            <h4 class="left__theme">Минусы:</h4>
-            <p class="left_paragraph">В&nbsp;этой профессии нечетко определены должностные обязанности,
-              и&nbsp;не&nbsp;каждый руководитель понимает, что именно должен делать фронт-энд разработчик.</p>
-            <p class="left_paragraph">Взаимодействие с&nbsp;большим количеством людей: бэк-энд разработчиками,
-              пользователями, дизайнерами, тестировщиками, аналитиками&nbsp;&mdash; и&nbsp;постоянное участие
-              в&nbsp;командных обсуждениях может быть напряженным и&nbsp;неэффективным.</p>
-          </div>
-        </li>
-        <li class="about__item right right-three"></li>
-      </ul>
-      <ul class="about__list list-reset flex" data-target="four">
-        <li class="about__item left">
-          <h3 class="left__title">Важные качества</h3>
-          <div class="left__descr">
-            <h4 class="left__theme">Hard skills:</h4>
-            <p class="left_paragraph">Знать HTML и&nbsp;CSS&nbsp;&mdash; это основа. HTML позволяет создавать структуру
-              страницы, а&nbsp;CSS&nbsp;&mdash; задавать стили: то, как будут выглядеть заголовки, подписи, таблицы,
-              графики.</p>
-            <p class="left_paragraph">Знать JavaScript. Это язык, который позволяет делать страницы интерактивными
-              и&nbsp;связывать их&nbsp;между собой.</p>
-            <p class="left_paragraph">Уметь пользоваться системой управления версиями Git и&nbsp;сервисом GitHub, чтобы
-              хранить все версии кода в&nbsp;одном месте и&nbsp;работать над ним совместно с&nbsp;командой.</p>
-            <p class="left_paragraph">Освоить фреймворки для работы с&nbsp;JavaScript: Vue.js, React.js.</p>
-            <p class="left_paragraph">Понимать основы юзабилити сайтов и&nbsp;сервисов, принципы кроссплатформенной
-              верстки, чтобы создавать удобные для пользователя интерфейсы.</p>
-            <p class="left_paragraph">Базово пользоваться Figma или Photoshop, на&nbsp;случай, если нужно будет быстро
-              что-то перерисовать без помощи дизайнера.</p>
-            <h4 class="left__theme">Soft skills:</h4>
-            <p class="left_paragraph">Уметь работать в&nbsp;команде. Не&nbsp;тянуть на&nbsp;себя одеяло,
-              но&nbsp;проявлять
-              экспертизу и&nbsp;отстаивать свои границы, находить компромисс.</p>
-            <p class="left_paragraph">Английский язык для чтения технической документации, обучения и&nbsp;работы
-              на&nbsp;международном рынке.</p>
-            <p class="left_paragraph">Упорство. Понадобится, чтобы пережить первые 100 отказов при приеме на&nbsp;работу
-              и&nbsp;найти команду мечты</p>
-          </div>
-        </li>
-        <li class="about__item right right-four"></li>
-      </ul>
-      <ul class="about__list list-reset flex" data-target="five">
-        <li class="about__item left">
-          <h3 class="left__title">Карьера</h3>
-          <div class="left__descr">
-            <p class="left_paragraph">Фронт-энд разработчик может стать непревзойденным и&nbsp;высокооплачиваемым гуру
-              создания пользовательской
-              части продукта или попробовать себя в&nbsp;смежных ролях.</p>
-            <p class="left_paragraph">Дальнейшая карьера может складываться по-разному, в зависимости от места работы,
-              личных предпочтений. В
-              любом случае в IT-сфере полезно развиваться в горизонтальном направлении, осваивая смежные профессии,
-              чтобы
-              стать настоящим мастером-асом.</p>
-          </div>
-        </li>
-        <li class="about__item right right-five"></li>
-      </ul>
-    </div>
-  </section>
-  <footer class="footer">
-    <p class="footer__text">Работу выполнил: Овинкин Кирилл Михайлович</p>
-    <p class="footer__text">Группа: РИ-210911</p>
-  </footer>
-  <script src="../static/js/information.js"></script>
+  </div>
+</section>
+<footer class="footer">
+  <p class="footer__text">Работу выполнил: Овинкин Кирилл Михайлович</p>
+  <p class="footer__text">Группа: РИ-210911</p>
+</footer>
+<script src="../static/js/information.js"></script>
 </body>
 
 </html>

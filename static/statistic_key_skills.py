@@ -88,6 +88,7 @@ for year in range(2015, 2023):
 df["id"] = [i for i in range(len(df))]
 df = df[['id'] + [x for x in df.columns if x != 'id']]
 
+print(df)
 
 connection = sqlite3.connect("../db.sqlite3")
 cursor = connection.cursor()

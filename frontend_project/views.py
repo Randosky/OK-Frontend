@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from frontend_project.models import Profession, StatByYear, StatByArea
+from frontend_project.models import Profession, StatByYear, StatByArea, StatBySkills
 
 
 def show_page(request):
@@ -18,7 +18,18 @@ def show_geography_page(request):
 
 
 def show_skills_page(request):
-    return render(request, "skills.html")
+    all_data = {}
+    data = []
+    for year in range(2015, 2022):
+        all_data[year] = {}
+    for i, objects in enumerate(StatBySkills.objects.all()):
+        if i % 10 == 0:
+            data = []
+            all_data[objects.published_at] = data
+        data.append(objects)
+
+    data = {"stat_by_skills": all_data}
+    return render(request, "skills.html", data)
 
 
 def show_vacancies_page(request):
