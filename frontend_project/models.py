@@ -38,3 +38,13 @@ class StatByArea(models.Model):
     class Meta:
         verbose_name = "Статистика по городам"
         verbose_name_plural = "Статистик по городам"
+
+
+class StatBySkills(models.Model):
+    published_at = models.CharField("Дата публикации", max_length=40)
+    key_skills = models.TextField("Навыки")
+    count = models.IntegerField("Частота появления")
+
+    class Meta:
+        verbose_name = "Статистика по навыкам"
+        verbose_name_plural = "Статистик по навыкам"

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>OK-Frontend</title>
   <link rel="stylesheet" href="../static/css/information.css">
@@ -13,34 +13,54 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="container header__container">
-      {% load static %}
-      <a href="{% url 'information' %}" class="header__left">
-        <img src="../static/img/logo.svg" alt="Логотип" class="header__logo">
-        <p class="header__text">OK-Frontend</p>
-      </a>
-      <ul class="header__list list-reset navigation">
-        <li class="navigation__item"><a href="{% url 'demand' %}">востребованность</a></li>
-        <li class="navigation__item"><a href="{% url 'geography' %}">география</a></li>
-        <li class="navigation__item"><a href="{% url 'skills' %}">навыки</a></li>
-        <li class="navigation__item"><a href="{% url 'vacancies' %}">последние вакансии</a></li>
-      </ul>
-    </div>
-  </header>
-  <section class="info">
-    <div class="container info__container">
-      <h2 class="info__header">Данные статистики по географии профессии</h2>
-      <p class="info_text">На&nbsp;изображении представлены графики, отображающие зарплаты по&nbsp;городам, а&nbsp;также
-        долю вакансий по&nbsp;городам</p>
-      <img src="../static/geography.png" alt="Графики" class="info__graphics">
-    </div>
-  </section>
-  <footer class="footer">
-    <p class="footer__text">Работу выполнил: Овинкин Кирилл Михайлович</p>
-    <p class="footer__text">Группа: РИ-210911</p>
-  </footer>
-  <script src="../static/js/information.js"></script>
+<header class="header">
+  <div class="container header__container">
+    {% load static %}
+    <a href="{% url 'information' %}" class="header__left">
+      <img src="../static/img/logo.svg" alt="Логотип" class="header__logo">
+      <p class="header__text">OK-Frontend</p>
+    </a>
+    <ul class="header__list list-reset navigation">
+      <li class="navigation__item"><a href="{% url 'demand' %}">востребованность</a></li>
+      <li class="navigation__item"><a href="{% url 'geography' %}">география</a></li>
+      <li class="navigation__item"><a href="{% url 'skills' %}">навыки</a></li>
+      <li class="navigation__item"><a href="{% url 'vacancies' %}">последние вакансии</a></li>
+    </ul>
+  </div>
+</header>
+<section class="info">
+  <div class="container info__container">
+    <h2 class="info__header">Графики статистики по географии профессии</h2>
+    <p class="info_text">На&nbsp;изображении представлены графики, отображающие зарплаты по&nbsp;городам, а&nbsp;также
+      долю вакансий по&nbsp;городам</p>
+    <img src="../static/geography.png" alt="Графики" class="info__graphics">
+    <h2 class="info__header">Данные статистики по географии профессии</h2>
+    <p class="info_text">Далее предоставлены те же данные, только в табличном виде</p>
+    <table>
+      <tr>
+        <th>Город</th>
+        <th>Уровень зарплат</th>
+        <th class="noBorder"></th>
+        <th>Город</th>
+        <th>Доля вакансий</th>
+      </tr>
+      {% for object in stat_by_area %}
+        <tr>
+          <td>{{ object.area_name_sal }}</td>
+          <td>{{ object.salary }}</td>
+          <td class="noBorder"></td>
+          <td>{{ object.area_name_vac }}</td>
+          <td>{{ object.count }}%</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+</section>
+<footer class="footer">
+  <p class="footer__text">Работу выполнил: Овинкин Кирилл Михайлович</p>
+  <p class="footer__text">Группа: РИ-210911</p>
+</footer>
+<script src="../static/js/information.js"></script>
 </body>
 
 </html>
