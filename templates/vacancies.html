@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>OK-Frontend</title>
   <link rel="stylesheet" href="../static/css/information.css">
@@ -13,26 +13,54 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="container header__container">
-      {% load static %}
-      <a href="{% url 'information' %}" class="header__left">
-        <img src="../static/img/logo.svg" alt="Логотип" class="header__logo">
-        <p class="header__text">OK-Frontend</p>
-      </a>
-      <ul class="header__list list-reset navigation">
-        <li class="navigation__item"><a href="{% url 'demand' %}">востребованность</a></li>
-        <li class="navigation__item"><a href="{% url 'geography' %}">география</a></li>
-        <li class="navigation__item"><a href="{% url 'skills' %}">навыки</a></li>
-        <li class="navigation__item"><a href="{% url 'vacancies' %}">последние вакансии</a></li>
-      </ul>
-    </div>
-  </header>
-  <footer class="footer">
-    <p class="footer__text">Работу выполнил: Овинкин Кирилл Михайлович</p>
-    <p class="footer__text">Группа: РИ-210911</p>
-  </footer>
-  <script src="../static/js/information.js"></script>
+<header class="header">
+  <div class="container header__container">
+    {% load static %}
+    <a href="{% url 'information' %}" class="header__left">
+      <img src="../static/img/logo.svg" alt="Логотип" class="header__logo">
+      <p class="header__text">OK-Frontend</p>
+    </a>
+    <ul class="header__list list-reset navigation">
+      <li class="navigation__item"><a href="{% url 'demand' %}">востребованность</a></li>
+      <li class="navigation__item"><a href="{% url 'geography' %}">география</a></li>
+      <li class="navigation__item"><a href="{% url 'skills' %}">навыки</a></li>
+      <li class="navigation__item"><a href="{% url 'vacancies' %}">последние вакансии</a></li>
+    </ul>
+  </div>
+</header>
+<section>
+  <div class="container info__container">
+    <h2 class="info__header">Последние вакансии</h2>
+    <p class="info_text">Ниже предоставлены реальные вакансии выгруженные с сайта HH.ru за 8 декабря 2022 года</p>
+    <table class="info__table">
+      <tr>
+        <th>Название вакансии</th>
+        <th>Описание вакансии</th>
+        <th>Навыки</th>
+        <th>Компания</th>
+        <th>Оклад</th>
+        <th>Название региона</th>
+        <th>Дата публикации вакансии</th>
+      </tr>
+      {% for object in vac %}
+        <tr>
+          <td>{{ object.pop }}</td>
+          <td>{{ object.pop }}</td>
+          <td>{{ object.pop }}</td>
+          <td>{{ object.pop }}</td>
+          <td>{{ object.pop }}</td>
+          <td>{{ object.pop }}</td>
+          <td>{{ object.pop }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+</section>
+<footer class="footer">
+  <p class="footer__text">Работу выполнил: Овинкин Кирилл Михайлович</p>
+  <p class="footer__text">Группа: РИ-210911</p>
+</footer>
+<script src="../static/js/information.js"></script>
 </body>
 
 </html>
