@@ -1,8 +1,4 @@
 from django.db import models
-import math
-from statistics import mean
-import pandas as pd
-import sqlite3
 
 
 class Profession(models.Model):

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-jf8s0$*dqx$*zgrf#vky@wasm5kkm#wppw2&3kh+ea6yib!bxr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['RandoSky.pythonanywhere.com']
 
 
 # Application definition
