@@ -1,5 +1,4 @@
 import re
-
 import requests
 from django.shortcuts import render
 from frontend_project.models import Profession, StatByYear, StatByArea, StatBySkills
