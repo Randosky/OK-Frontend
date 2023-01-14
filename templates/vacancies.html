@@ -28,32 +28,30 @@
     </ul>
   </div>
 </header>
-<section>
+<section class="info">
   <div class="container info__container">
     <h2 class="info__header">Последние вакансии</h2>
     <p class="info_text">Ниже предоставлены реальные вакансии выгруженные с сайта HH.ru за 8 декабря 2022 года</p>
-    <table class="info__table">
-      <tr>
-        <th>Название вакансии</th>
-        <th>Описание вакансии</th>
-        <th>Навыки</th>
-        <th>Компания</th>
-        <th>Оклад</th>
-        <th>Название региона</th>
-        <th>Дата публикации вакансии</th>
-      </tr>
+    <div class="info__vacancy vacancy">
       {% for object in vac %}
-        <tr>
-          <td>{{ object.pop }}</td>
-          <td>{{ object.pop }}</td>
-          <td>{{ object.pop }}</td>
-          <td>{{ object.pop }}</td>
-          <td>{{ object.pop }}</td>
-          <td>{{ object.pop }}</td>
-          <td>{{ object.pop }}</td>
-        </tr>
+        <div class="vacancy__block">
+          <h3 class="vacancy__head">Название вакансии</h3>
+          <p class="vacancy__text">{{ object.pop }}</p>
+          <h3 class="vacancy__head">Описание вакансии</h3>
+          <p class="vacancy__text">{{ object.pop }}</p>
+          <h3 class="vacancy__head">Навыки</h3>
+          <p class="vacancy__text">{{ object.pop }}</p>
+          <h3 class="vacancy__head">Компания</h3>
+          <p class="vacancy__text">{{ object.pop }}</p>
+          <h3 class="vacancy__head">Оклад</h3>
+          <p class="vacancy__text">{{ object.pop }}</p>
+          <h3 class="vacancy__head">Название региона</h3>
+          <p class="vacancy__text">{{ object.pop }}</p>
+          <h3 class="vacancy__head">Дата публикации вакансии</h3>
+          <p class="vacancy__text">{{ object.pop }}</p>
+        </div>
       {% endfor %}
-    </table>
+    </div>
   </div>
 </section>
 <footer class="footer">

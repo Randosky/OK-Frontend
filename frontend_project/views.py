@@ -76,6 +76,8 @@ def show_vacancies_page(request):
         get_url = f"https://api.hh.ru/vacancies/{vacancy['id']}"
         vacancy_info = requests.get(get_url).json()
         skills = ", ".join([skill["name"] for skill in vacancy_info["key_skills"]])
+        if not skills:
+            skills = "Не указано на сайте HH.ru"
 
         vacancy_items.append([vacancy["published_at"], vacancy["area"]["name"], salary, vacancy["employer"]["name"],
                               skills, parse_html(vacancy_info["description"]), vacancy["name"]])

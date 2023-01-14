@@ -108,11 +108,11 @@ body {
     padding-right: 8px;
 }
 
-.demand{
+.demand {
     margin-bottom: 60px;
 }
 
-.demand__container{
+.demand__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -133,11 +133,11 @@ body {
     color: #E0E0E0;
 }
 
-.demand__text:not(:last-child){
+.demand__text:not(:last-child) {
     margin-bottom: 30px;
 }
 
-.demand__block{
+.demand__block {
     background-color: #333333;
     border-radius: 30px;
     padding: 60px 100px;
@@ -292,6 +292,10 @@ body {
 
 /* Others */
 
+.info {
+    margin-bottom: 60px;
+}
+
 .info__header {
     text-align: center;
     font-weight: 700;
@@ -359,3 +363,32 @@ td {
     flex-wrap: wrap;
 }
 
+/* vacancy */
+
+.vacancy__block {
+    display: block;
+    background-color: #333333;
+    border-radius: 30px;
+    padding: 60px 100px;
+}
+
+.vacancy__block:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.vacancy__head {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #E0E0E0;
+}
+
+.vacancy__text {
+    font-weight: 400;
+    font-size: 16px;
+    color: #E0E0E0;
+}
+
+.vacancy__text:not(:last-child) {
+    margin-bottom: 30px;
+}
